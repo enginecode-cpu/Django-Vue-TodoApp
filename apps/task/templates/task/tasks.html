@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% verbatim %}
+<div id="app">
+    <h1>📝Create New Task</h1>
+    <form @submit.prevent="createTask">
+        <div class="form-group">
+            <div class="form-header">
+                <input class="form-control" v-model="task">
+            </div>
+            <div class="button-container">
+                <button>Create</button>
+            </div>
+        </div>
+    </form>
+    <div class="todo-list">
+        <div 
+            class="todo"
+            v-for="(task, index) in taskList"
+        >
+            <div 
+                class="todo-content"
+                @click="toggleTask(task.id, index)"
+                :class="{'completed': task.completed}"
+            >
+                {{ task.title }}
+            </div>
+            
+            <button class='delete' @click.stop="deleteTask(task.id, index)">Delete</button>
+        </div>
+    </div>
+</div>
+
+{% endverbatim %}
+{% endblock %}

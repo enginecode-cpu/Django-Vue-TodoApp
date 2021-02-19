@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "NanumGothic", sans-serif;
+}
+
+#app {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app form .form-group {
+  margin-top: 2rem;
+  display: flex;
+}
+
+#app form .form-group .form-header input {
+  outline: none;
+  border: none;
+  width: 300px;
+  height: 40px;
+  font-size: 1.45rem;
+  border-bottom: 1.75px solid #000;
+}
+
+#app form .form-group .button-container button {
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 40px;
+  margin-left: 0.75rem;
+  font-size: 1.125rem;
+  background-color: #00b74a;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.todo-list {
+  height: 80vh;
+}
+
+.todo-list .todo {
+  margin-top: 1rem;
+  width: calc(100px + 300px + 0.75rem);
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #dfe6e9;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.todo-list .todo .todo-content.completed {
+  text-decoration: line-through;
+}
+
+.todo-list .todo:nth-child(1) {
+  margin-top: 2rem;
+  width: calc(100px + 300px + 0.75rem);
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #dfe6e9;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.todo-list .todo .todo-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.todo-list .todo .delete {
+  outline: none;
+  border: none;
+  width: 80px;
+  height: 30px;
+  margin-left: 0.75rem;
+  font-size: 1rem;
+  background-color: #df4d29;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
